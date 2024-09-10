@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapist Dashboard</title>
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <body>
+
+        <!-- Black Top Header -->
+        <div class="topbar">
+            <div class="contact-info">
+                <span>📞 Call: +01 123455678990</span>
+            </div>
+            <div class="email-info">
+                <span>✉️ Email: demo@gmail.com</span>
+            </div>
+        </div>
+    
+        <!-- Main Header Section -->
+        <header class="main-header">
+            <div class="container">
+                <div class="navbar">
+                    <a class="navbar-brand" href="index.html">ForYou</a>
+                    <ul class="nav-menu">
+                        <li><a href="group-sessions.html">Manage Group Sessions</a></li>
+                        <li><a href="patient-list.html">Patient List</a></li>
+                        <li><a href="booking-details.html">Booking Details</a></li>
+                        <li><a href="check-availability.html">Check Availability</a></li>
+                        <li><a href="inbox.html">Inbox</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="greeting-section">
+            <h1>Good morning, Monica!</h1>
+            <p>Here’s your summary for today:</p>
+        </div>
+        
+        <div class="dashboard">
+            <div class="top-row">
+                <div class="widget employees">
+                    <i class="fas fa-users"></i>
+                    <h3>7</h3>
+                    <p>Employees Working Today</p>
+                </div>
+                <div class="widget new-clients">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>54</h3>
+                    <p>New Clients</p>
+                </div>
+                <div class="widget appointments">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>This Week</h3>
+                    <p>Upcoming Appointments</p>
+                </div>
+            </div>
+        
+            <div class="middle-row">
+                <div class="widget calendar">
+                    <h3><i class="fas fa-calendar"></i> Calendar</h3>
+                    <p>Feb 20 - Meeting with John</p>
+                    <p>Feb 21 - Client session with Sarah</p>
+                </div>
+        
+                <div class="recent-chats">
+                    <h4>Recent Chats</h4>
+                    <div class="chat-list">
+                        <div class="chat-item">
+                            <div class="chat-avatar">
+                                <img src="./images/abhi.png" alt="Abhishek">
+                            </div>
+                            <div class="chat-info">
+                                <span class="chat-name">Abhishek</span>
+                                <span class="chat-message">Meeting scheduled</span>
+                            </div>
+                            <span class="chat-time">1:24 PM</span>
+                        </div>
+                
+                        <div class="chat-item highlighted">
+                            <div class="chat-avatar">
+                                <img src="./images/nafia.png" alt="Megan Clark">
+                            </div>
+                            <div class="chat-info">
+                                <span class="chat-name">Nafia</span>
+                                <span class="chat-message">Update on marketing campaign</span>
+                            </div>
+                            <span class="chat-time">12:32 PM</span>
+                        </div>
+                
+                        <div class="chat-item">
+                            <div class="chat-avatar">
+                                <img src="./images/Lax.png" alt="Brandon Williams">
+                            </div>
+                            <div class="chat-info">
+                                <span class="chat-name">Luxman</span>
+                                <span class="chat-message">Designly 2.0 is about to launch</span>
+                            </div>
+                            <span class="chat-time">Yesterday at 8:57 PM</span>
+                        </div>
+                
+                        <div class="chat-item">
+                            <div class="chat-avatar">
+                                <img src="./images/dev.png" alt="Reid Smith">
+                            </div>
+                            <div class="chat-info">
+                                <span class="chat-name">Dev</span>
+                                <span class="chat-message">My friend Julie loves Dappr!</span>
+                            </div>
+                            <span class="chat-time">Yesterday at 8:49 PM</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="bottom-row">
+                <div class="widget to-do-list">
+                    <h3>Your To-Do List</h3>
+                    <ul>
+                        <li>Run payroll</li>
+                        <li>Review time-off request</li>
+                        <li>Finish onboarding Tony</li>
+                    </ul>
+                </div>
+        
+                <div class="widget board-meeting">
+                    <h3>Board Meeting</h3>
+                    <p>You have been invited to a meeting of the Board Directors on <strong>Feb 22 at 6:00 PM</strong>.</p>
+                </div>
+            </div>
+        </div>
+        
+
+    <script src="./Scripts/dashboard.js"></script>
+</body>
+</html>
