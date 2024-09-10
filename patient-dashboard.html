@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="./styles/patient-dashboard.css">
+</head>
+<body>
+    <!-- Placeholder for the Header -->
+    <div id="header-placeholder"></div>
+    <!-- Main Dashboard Content -->
+    <main class="dashboard">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <h1>Good Morning, Steve!</h1>
+            <p>How are you feeling today?</p>
+        </header>
+
+        <!-- Banner -->
+        <section class="banner">
+            <h2>Find the best doctors with ForYou</h2>
+            <p>Appoint the doctors and get the finest medical services.</p>
+        </section>
+
+        <!-- Vitals Section -->
+        <section class="vitals">
+            <div class="vital-item">
+                <h3>Body Temperature</h3>
+                <p>36.2°C</p>
+            </div>
+            <div class="vital-item">
+                <h3>Pulse</h3>
+                <p>85 bpm</p>
+            </div>
+            <div class="vital-item">
+                <h3>Blood Pressure</h3>
+                <p>80/70 mmHg</p>
+            </div>
+            <div class="vital-item">
+                <h3>Breathing Rate</h3>
+                <p>15 breaths/m</p>
+            </div>
+        </section>
+
+        <!-- Appointments Section -->
+        <section class="appointments">
+            <h2>Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Doctor</th>
+                        <th>Specialization</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>James Carter</td>
+                        <td>Consellor</td>
+                        <td>02/11/2023</td>
+                        <td>4:00 PM</td>
+                        <td><span class="status active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Kelli Jenner</td>
+                        <td>Therapist</td>
+                        <td>02/11/2023</td>
+                        <td>4:30 PM</td>
+                        <td><span class="status upcoming">Upcoming</span></td>
+                    </tr>
+                    <tr>
+                        <td>Mike Wise</td>
+                        <td>Therapist</td>
+                        <td>02/11/2023</td>
+                        <td>5:00 PM</td>
+                        <td><span class="status completed">Completed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="previous-reports">
+            <h2>My Previous Reports</h2>
+            <!-- Upload PDF Button -->
+            <div class="upload-section">
+                <input type="file" id="uploadPdf" accept="application/pdf" style="display: none;">
+                <button id="uploadBtn">Upload Report</button>
+            </div>
+        
+            <!-- Display uploaded PDF reports -->
+            <ul id="pdfReports">
+                <li>Glucose - 02/11/2023</li>
+                <li>Blood Count - 02/11/2023</li>
+                <li>Full Body X-Ray - 02/11/2023</li>
+                <li>Hepatitis Panel - 02/11/2023</li>
+                <li>Calcium - 02/11/2023</li>
+            </ul>
+        </section>
+        
+
+        <!-- Calendar Section -->
+        <section class="calendar">
+            <h2>Date</h2>
+            <p>December 2023</p>
+            <div class="calendar-widget">
+                <p>Wed 20</p>
+                <p>Dr. Lionel - Cardiologist 1:30 PM</p>
+            </div>
+        </section>
+        <script>
+            // Use JavaScript to load the header.html file
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+        </script>
+        <script src="./scripts/patient-dashboard.js"></script>
+    </main>
+</body>
+</html>
