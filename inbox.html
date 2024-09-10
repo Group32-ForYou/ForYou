@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapist Inbox</title>
+    <link rel="stylesheet" href="./styles/inbox.css">
+</head>
+<body>
+    <!-- Black Top Header -->
+    <div class="topbar">
+        <div class="contact-info">
+            <span>📞 Call: +01 123455678990</span>
+        </div>
+        <div class="email-info">
+            <span>✉️ Email: demo@gmail.com</span>
+        </div>
+    </div>
+
+    <!-- Main Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="navbar">
+                <a class="navbar-brand" href="#">ForYou</a>
+                <ul class="nav-menu">
+                    <li><a href="group-sessions.html"><b>Manage Group Sessions</b></a></li>
+                    <li><a href="patient-list.html">Patient List</a></li>
+                    <li><a href="booking-details.html">Booking Details</a></li>
+                    <li><a href="check-availability.html">Check Availability</a></li>
+                    <li><a href="inbox.html">Inbox</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Inbox Section -->
+    <div class="container">
+        <h1>Inbox</h1>
+        <div class="inbox">
+            <div class="messages-list">
+                <h2>Messages</h2>
+                <ul id="messageList">
+                    <li onclick="viewMessage(1)" class="unread">From: John Doe - Inquiry about next session</li>
+                    <li onclick="viewMessage(2)">From: Jane Smith - Group session reminder</li>
+                    <li onclick="viewMessage(3)">From: Clinic Admin - Staff meeting notice</li>
+                </ul>
+            </div>
+
+            <div class="message-details">
+                <h2>Message Details</h2>
+                <div id="messageContent">
+                    <!-- Message content will load here -->
+                    <p>Select a message to view its details.</p>
+                </div>
+                <textarea id="replyBox" placeholder="Reply to this message..."></textarea>
+                <button onclick="sendReply()">Send Reply</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./Scripts/inbox.js"></script>
+</body>
+</html>
