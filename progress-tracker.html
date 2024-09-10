@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracker</title>
+    <link rel="stylesheet" href="./styles/progress-tracker.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+    <!-- Placeholder for the Header -->
+    <div id="header-placeholder"></div>
+    <div class="container">
+
+        <!-- Health Metric Tracking -->
+        <section class="health-metric-tracker">
+            <h2>Health Metric Tracking</h2>
+            <canvas id="vitalsChart"></canvas>
+        </section>
+
+        <!-- Mood Tracker -->
+        <section class="mood-tracker">
+            <h2>Mood Tracker</h2>
+            <canvas id="moodChart"></canvas>
+        </section>
+
+        <!-- Goal Progress -->
+        <section class="goal-progress">
+            <h2>Goal Progress</h2>
+            <div class="goal-container">
+                <div class="goal" id="stepsGoal">
+                    <h3>Steps</h3>
+                    <canvas id="stepsChart"></canvas>
+                </div>
+                <div class="goal" id="waterGoal">
+                    <h3>Water Intake</h3>
+                    <canvas id="waterChart"></canvas>
+                </div>
+                <div class="goal" id="sleepGoal">
+                    <h3>Sleep</h3>
+                    <canvas id="sleepChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journal Entries and Reflections -->
+        <section class="journal-entries">
+            <h2>Journal Entries</h2>
+            <canvas id="journalChart"></canvas>
+        </section>
+
+        <!-- Activity Tracker -->
+        <section class="activity-tracker">
+            <h2>Activity Tracker</h2>
+            <canvas id="activityChart"></canvas>
+        </section>
+
+        <!-- Medication Compliance -->
+        <section class="medication-compliance">
+            <h2>Medication Compliance</h2>
+            <canvas id="medicationChart"></canvas>
+        </section>
+
+        <!-- Sleep Tracker -->
+        <section class="sleep-tracker">
+            <h2>Sleep Tracker</h2>
+            <canvas id="sleepTrackerChart"></canvas>
+        </section>
+    </div>
+    <script>
+        // Use JavaScript to load the header.html file
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+    <script src="./Scripts/progress-tracker.js"></script> <!-- Include JS file -->
+</body>
+</html>
