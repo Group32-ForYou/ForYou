@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient List</title>
+    <link rel="stylesheet" href="./styles/patient-list.css">
+</head>
+<body>
+
+    <!-- Black Top Header -->
+    <div class="topbar">
+        <div class="contact-info">
+            <span>📞 Call: +01 123455678990</span>
+        </div>
+        <div class="email-info">
+            <span>✉️ Email: demo@gmail.com</span>
+        </div>
+    </div>
+
+    <!-- Main Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="navbar">
+                <a class="navbar-brand" href="index.html">ForYou</a>
+                <ul class="nav-menu">
+                    <li><a href="group-sessions.html">Manage Group Sessions</a></li>
+                    <li><a href="patient-list.html">Patient List</a></li>
+                    <li><a href="booking-details.html">Booking Details</a></li>
+                    <li><a href="check-availability.html">Check Availability</a></li>
+                    <li><a href="inbox.html">Inbox</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="patient-list">
+            <h2>Patient List</h2>
+            <input type="text" id="search-bar" placeholder="Search for patients" oninput="searchPatients()">
+            <ul id="patient-list">
+                <!-- Add your patient names here -->
+                <li onclick="openPatientDetails('John Doe')">John Doe</li>
+                <li onclick="openPatientDetails('Jane Smith')">Jane Smith</li>
+                <li onclick="openPatientDetails('Michael Johnson')">Michael Johnson</li>
+                <li onclick="openPatientDetails('Emily Davis')">Emily Davis</li>
+                <li onclick="openPatientDetails('Daniel Wilson')">Daniel Wilson</li>
+                <li onclick="openPatientDetails('Sophia Clark')">Sophia Clark</li>
+                <li onclick="openPatientDetails('Olivia Martinez')">Olivia Martinez</li>
+                <li onclick="openPatientDetails('Liam Anderson')">Liam Anderson</li>
+                <li onclick="openPatientDetails('Emma White')">Emma White</li>
+                <li onclick="openPatientDetails('William Harris')">William Harris</li>
+                <li onclick="openPatientDetails('Nafia Alam')">Nafia Alam</li>
+                <li onclick="openPatientDetails('Dev Thaker')">Dev Thaker</li>
+                <li onclick="openPatientDetails('Laxman')">Laxman</li>
+                <li onclick="openPatientDetails('Abhishek Sindhav')">Abhishek Sindhav</li>
+                <li onclick="openPatientDetails('Ajai')">Ajai</li>
+                <li onclick="openPatientDetails('Belal')">Belal</li>
+                <li onclick="openPatientDetails('Abhishek Tadvi')">Abhishek Tadvi</li>
+                <li onclick="openPatientDetails('Brett')">Brett</li>
+                <li onclick="openPatientDetails('Gatha')">Gatha</li>
+                <li onclick="openPatientDetails('Shane')">Shane</li>
+                <li onclick="openPatientDetails('Ajay')">Ajay</li>
+
+                <!-- Continue adding as many patients as needed -->
+            </ul>
+            <button id="show-all" onclick="showAllPatients()">Show All Patients</button>
+            <div id="pagination">
+                <button id="prev-page" onclick="prevPage()" disabled>Previous</button>
+                <button id="next-page" onclick="nextPage()">Next</button>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./Scripts/pateint-list.js"></script>
+</body>
+</html>
