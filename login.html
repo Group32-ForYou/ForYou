@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Health App</title>
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+ <!-- Black Top Header -->
+ <div class="topbar">
+    <div class="contact-info">
+        <span>📞 Call: +01 123455678990</span>
+    </div>
+    <div class="email-info">
+        <span>✉️ Email: demo@gmail.com</span>
+    </div>
+</div>
+
+<!-- Main Header Section -->
+<header class="main-header">
+    <div class="container1">
+        <div class="navbar">
+            <a class="navbar-brand" href="index.html">ForYou</a>
+            <ul class="nav-menu">
+                <li><a href="group-sessions.html">Manage Group Sessions</a></li>
+                <li><a href="patient-list.html">Patient List</a></li>
+                <li><a href="booking-details.html">Booking Details</a></li>
+                <li><a href="check-availability.html">Check Availability</a></li>
+                <li><a href="inbox.html">Inbox</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to ForYou</h1>
+        <p>Manage your health effortlessly. Please login to continue.</p>
+    </div>
+
+    <!-- Login Section with Toggle Option -->
+    <div class="container">
+        <div class="toggle-buttons">
+            <button id="patientBtn" class="active" onclick="toggleForm('patient')">Login as Patient</button>
+            <button id="therapistBtn" onclick="toggleForm('therapist')">Login as Therapist</button>
+        </div>
+
+        <div class="login-container">
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message">Invalid username or password</div>
+
+            <!-- Patient Login Form -->
+            <div id="patientForm" class="form-container active">
+                <h2>Patient Login</h2>
+                <form id="patientLoginForm" onsubmit="return validateLogin('patient')">
+                    <input type="text" id="patientUsername" class="form-control" placeholder="Patient Username" required>
+                    <input type="password" id="patientPassword" class="form-control" placeholder="Password" required>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+
+            <!-- Therapist Login Form -->
+            <div id="therapistForm" class="form-container">
+                <h2>Therapist Login</h2>
+                <form id="therapistLoginForm" onsubmit="return validateLogin('therapist')">
+                    <input type="text" id="therapistUsername" class="form-control" placeholder="Therapist Username" required>
+                    <input type="password" id="therapistPassword" class="form-control" placeholder="Password" required>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+ 
+  
+
+    <!-- Link to external JS file -->
+    <script src="./Scripts/foryou.js"></script>
+</body>
+</html>
