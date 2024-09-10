@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.topbar {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main-header {
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+  }
+
+.nav-menu {
+    list-style-type: none;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-menu li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.nav-menu li a:hover {
+    text-decoration: underline;
+}
+
+/* Booking Details Section */
+.booking-details {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.booking-details h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.cancel-btn {
+    background-color: grey;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Booking Table */
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.booking-table th, .booking-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.booking-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Popup Modal for Adding Booking */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.popup-content h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.fancy-popup {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    background-color: #f0f8ff;
+}
+
+.fancy-popup input,
+.fancy-popup select {
+    width: 90%;
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.fancy-popup input[type="date"],
+.fancy-popup input[type="time"] {
+    padding-left: 10px;
+}
+ /* Footer Section */
+ .footer_section {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
