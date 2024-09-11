@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Group Sessions</title>
+    <link rel="stylesheet" href="styles/group-session.css">
+</head>
+<body>
+    <!-- Black Top Header -->
+    <div class="topbar">
+        <div class="contact-info">
+            <span>📞 Call: +01 123455678990</span>
+        </div>
+        <div class="email-info">
+            <span>✉️ Email: demo@gmail.com</span>
+        </div>
+    </div>
+
+    <!-- Main Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="navbar">
+                <a class="navbar-brand" href="foryou.html">ForYou</a>
+                <ul class="nav-menu">
+                    <li><a href="group-sessions.html">Manage Group Sessions</a></li>
+                    <li><a href="patient-list.html">Patient List</a></li>
+                    <li><a href="booking-details.html">Booking Details</a></li>
+                    <li><a href="check-availability.html">Check Availability</a></li>
+                    <li><a href="inbox.html">Inbox</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Group Sessions Section -->
+        <section class="group-sessions">
+            <h2>Manage Group Sessions</h2>
+            <button id="create-session">Create New Session</button>
+            
+            <div id="session-list" class="session-list">
+                <!-- Existing sessions will be dynamically added here -->
+            </div>
+        </section>
+
+        <!-- Popup Modal for Creating a New Session -->
+        <div id="session-modal" class="modal">
+            <div class="modal-content">
+                <h3>Create New Session</h3>
+                <label for="session-name">Session Name:</label>
+                <input type="text" id="session-name" placeholder="Enter session name">
+                
+                <label for="session-date">Date:</label>
+                <input type="date" id="session-date">
+                
+                <label for="session-time">Time:</label>
+                <input type="time" id="session-time">
+                
+                <label for="session-participants">Participants (comma-separated):</label>
+                <input type="text" id="session-participants" placeholder="Enter participants">
+
+                <div class="modal-buttons">
+                    <button id="create-session-btn">Create</button>
+                    <button id="cancel-session">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="scripts/group-sessions.js"></script>
+</body>
+</html>
