@@ -1,0 +1,148 @@
+/* Custom Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.topbar {
+    background-color: black;
+    color: orange;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 14px;
+}
+/* Main Header */
+.main-header {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    display: inline;
+}
+
+.nav-menu a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-color: #0d50ad;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h1, .hero p {
+    font-weight: 600;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.btn {
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #0d50ad;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #0d50ad;
+}
+
+.footer {
+    padding: 20px;
+    color: #666;
+}
+
+.toggle-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+    background-color: #0d50ad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.toggle-buttons button.active {
+    background-color: #0d50ad;
+}
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    display: none;
+}
+ /* Footer Section */
+ .footer_section {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
