@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Availability</title>
+    <link rel="stylesheet" href="./styles/doctor-availability.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="foryou.html" class="brand-name">ForYou</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="patient-dashboard.php">Overview</a></li>
+            <li><a href="appointment.html">Appointments</a></li>
+            <li><a href="tracker.html">Tracker</a></li>
+            <li><a href="doctor-availability.html">Doctor Availability</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+         <!-- Doctor Cards -->
+        <section class="doctor-grid" style="margin-left: 3cm;">
+            <div class="doctor-card" onclick="showDoctorAvailability('Dr. John Smith', 'Consellor')">
+                <img src="./images/team-1.jpg" alt="Doctor Photo">
+                <h3>Dr. John Smith</h3>
+                <p>Consellor</p>
+            </div>
+
+            <div class="doctor-card" onclick="showDoctorAvailability('Dr. Jane Doe', 'Therapist')">
+                <img src="./images/team-2.jpg" alt="Doctor Photo">
+                <h3>Dr. Jane Doe</h3>
+                <p>Therapist</p>
+            </div>
+
+            <div class="doctor-card" onclick="showDoctorAvailability('Dr. Emily Lee', 'Psychiatrist')">
+                <img src="./images/team-3.jpg" alt="Doctor Photo">
+                <h3>Dr. Emily Lee</h3>
+                <p>Psychiatrist</p>
+            </div>
+
+            <div class="doctor-card" onclick="showDoctorAvailability('Dr. Mark Davis', 'Psychologist')">
+                <img src="./images/team-4.jpg" alt="Doctor Photo">
+                <h3>Dr. Mark Davis</h3>
+                <p>Psychologist</p>
+            </div>
+        </section>
+
+        <!-- Doctor Availability (Initially hidden) -->
+        <section id="doctor-availability" class="hidden" style="margin-left: 3cm;">
+            <h3 id="doctor-name"></h3>
+            <p id="doctor-department"></p>
+            <table id="availability-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic Availability Data -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- Payment Modal (Initially Hidden) -->
+    <div id="payment-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+            <h2>Confirm Your Appointment</h2>
+            <p>Please proceed with the payment to confirm your booking.</p>
+            <form id="payment-form">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" required>
+
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required>
+
+                <button type="button" onclick="processPayment()">Pay Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Use JavaScript to load the header.html file
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        // Payment Modal Logic
+        function showPaymentModal() {
+            document.getElementById('payment-modal').classList.remove('hidden');
+        }
+
+        function closePaymentModal() {
+            document.getElementById('payment-modal').classList.add('hidden');
+        }
+
+        function processPayment() {
+            const cardNumber = document.getElementById('card-number').value;
+            const expiryDate = document.getElementById('expiry-date').value;
+            const cvv = document.getElementById('cvv').value;
+
+            if (cardNumber && expiryDate && cvv) {
+                alert("Payment successful! Your appointment is confirmed.");
+                closePaymentModal();
+                // Add further actions like adding to the appointment list or confirmation
+            } else {
+                alert("Please fill in all payment details.");
+            }
+        }
+
+        // Mock data for showing doctor availability (replace this with real data if available)
+        function showDoctorAvailability(doctorName, department) {
+            // Set the doctor name and department
+            document.getElementById('doctor-name').innerText = doctorName;
+            document.getElementById('doctor-department').innerText = department;
+
+            // Define dummy availability
+            const availability = [
+                { day: 'Monday', time: '9:00 AM - 11:00 AM' },
+                { day: 'Tuesday', time: '1:00 PM - 3:00 PM' },
+                { day: 'Wednesday', time: '10:00 AM - 12:00 PM' }
+            ];
+
+            // Populate the availability table
+            const tableBody = document.querySelector('#availability-table tbody');
+            tableBody.innerHTML = ''; // Clear previous data
+            availability.forEach(slot => {
+                const row = document.createElement('tr');
+
+                const dayCell = document.createElement('td');
+                dayCell.innerText = slot.day;
+
+                const timeCell = document.createElement('td');
+                timeCell.innerText = slot.time;
+
+                const actionCell = document.createElement('td');
+                const bookButton = document.createElement('button');
+                bookButton.innerText = 'Book';
+                bookButton.onclick = showPaymentModal; // Trigger the payment modal when clicked
+                actionCell.appendChild(bookButton);
+
+                row.appendChild(dayCell);
+                row.appendChild(timeCell);
+                row.appendChild(actionCell);
+
+                tableBody.appendChild(row);
+            });
+
+            // Show the availability section
+            document.getElementById('doctor-availability').classList.remove('hidden');
+        }
+    </script>
+    <script>
+        // Use JavaScript to load the header.html file
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
